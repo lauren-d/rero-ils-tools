@@ -80,6 +80,16 @@ def desherbage():
     """Desherbage commands."""
 
 
+@tools.group()
+def utils():
+    """Utils commands."""
+
+
+@utils.group('records')
+def records():
+    """All record utilities commands."""
+
+
 tools.add_command(app)
 
 migration.add_command(clean_templates)
