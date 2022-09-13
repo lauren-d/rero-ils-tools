@@ -28,6 +28,7 @@ from .cli.example import app
 from .cli.items.replace import items_replace
 from .cli.items.update import items_update
 from .cli.migration.clean_templates import clean_templates
+from .cli.migration.move_items import move_items_location
 from .cli.patrons.duplicate_emails import duplicate_emails
 from .cli.patrons.fix_patron_emails import fix_patron_emails
 from .cli.patrons.validate_checkouts import validate_checkouts
@@ -93,6 +94,8 @@ def records():
 tools.add_command(app)
 
 migration.add_command(clean_templates)
+migration.add_command(move_items_location)
+
 update.add_command(set_circulation_category)
 update.add_command(items_update)
 
